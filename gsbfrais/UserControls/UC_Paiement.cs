@@ -39,8 +39,10 @@ namespace gsbfrais.UserControls
         private void button7_Click(object sender, EventArgs e)
         {
             Database cn = new Database();
+             
             cn.getLesFraisHorsForfait(comboBoxV.SelectedItem.ToString(), comboBoxD.SelectedItem.ToString(), listView);
-
+            cn.getLesFraisForfait(comboBoxV.SelectedItem.ToString(), comboBoxD.SelectedItem.ToString(), listView1);
+            labeletats.Text = comboBoxD.SelectedItem.ToString();
 
         }
     }

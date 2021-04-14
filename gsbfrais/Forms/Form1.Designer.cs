@@ -137,17 +137,19 @@ namespace gsbfrais
             // textBox1
             // 
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(348, 388);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(475, 27);
+            this.textBox1.Size = new System.Drawing.Size(475, 31);
             this.textBox1.TabIndex = 5;
             // 
             // textBox2
             // 
             this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(348, 474);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(475, 27);
+            this.textBox2.Size = new System.Drawing.Size(475, 31);
             this.textBox2.TabIndex = 7;
             // 
             // label4
@@ -209,7 +211,7 @@ namespace gsbfrais
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(356, 515);
+            this.label5.Location = new System.Drawing.Point(380, 520);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(411, 19);
             this.label5.TabIndex = 12;

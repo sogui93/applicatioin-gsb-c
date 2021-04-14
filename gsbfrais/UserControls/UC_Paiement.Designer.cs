@@ -180,11 +180,10 @@ namespace gsbfrais.UserControls
             this.labeletats.AutoSize = true;
             this.labeletats.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labeletats.ForeColor = System.Drawing.Color.White;
-            this.labeletats.Location = new System.Drawing.Point(58, 48);
+            this.labeletats.Location = new System.Drawing.Point(203, 48);
             this.labeletats.Name = "labeletats";
-            this.labeletats.Size = new System.Drawing.Size(120, 19);
+            this.labeletats.Size = new System.Drawing.Size(0, 19);
             this.labeletats.TabIndex = 6;
-            this.labeletats.Text = "jerome Dubois";
             // 
             // label3
             // 
@@ -201,12 +200,12 @@ namespace gsbfrais.UserControls
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.ForeColor = System.Drawing.SystemColors.Window;
             this.label4.Location = new System.Drawing.Point(14, 48);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 19);
+            this.label4.Size = new System.Drawing.Size(187, 19);
             this.label4.TabIndex = 4;
-            this.label4.Text = "Etat  :";
+            this.label4.Text = "Etat  : Validée depuis le";
             // 
             // label6
             // 
@@ -379,12 +378,12 @@ namespace gsbfrais.UserControls
             // 
             // columnHeader6
             // 
-            this.columnHeader6.Text = "Forfait Etape\t";
+            this.columnHeader6.Text = "Frais Kilométrique\t";
             this.columnHeader6.Width = 209;
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "Frais Kilométrique\t";
+            this.columnHeader1.Text = "Repas Restaurant";
             this.columnHeader1.Width = 224;
             // 
             // columnHeader4
@@ -394,7 +393,7 @@ namespace gsbfrais.UserControls
             // 
             // columnHeader5
             // 
-            this.columnHeader5.Text = "Repas Restaurant";
+            this.columnHeader5.Text = "Forfait Etape\t";
             this.columnHeader5.Width = 284;
             // 
             // button1
@@ -408,7 +407,7 @@ namespace gsbfrais.UserControls
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(56, 506);
+            this.button1.Location = new System.Drawing.Point(56, 519);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(303, 38);
             this.button1.TabIndex = 43;
@@ -426,9 +425,9 @@ namespace gsbfrais.UserControls
             this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(383, 506);
+            this.button2.Location = new System.Drawing.Point(383, 519);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(303, 38);
+            this.button2.Size = new System.Drawing.Size(277, 38);
             this.button2.TabIndex = 44;
             this.button2.Text = "Confrimer Remboursement";
             this.button2.UseVisualStyleBackColor = false;

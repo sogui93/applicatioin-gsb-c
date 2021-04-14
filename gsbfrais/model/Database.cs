@@ -154,6 +154,60 @@ namespace gsbfrais.model
 
         }
 
+        public void getLesFraisForfait(String idvisiteur, String mois, ListView l)
+        {
+
+
+
+
+            if (OpenConnection())
+            {
+                l.Items.Clear();
+                string s = "SELECT fraisforfait.id as idfrais ,";
+                s += "lignefraisforfait.quantite as quantite ";
+                s += "FROM lignefraisforfait ";
+                s += "INNER JOIN fraisforfait ";
+                s += "ON fraisforfait.id = lignefraisforfait.idfraisforfait ";
+                s += "WHERE lignefraisforfait.idvisiteur = @idvisiteur ";
+                s += "AND lignefraisforfait.mois = @mois ";
+                s += "ORDER BY lignefraisforfait.idfraisforfait";
+                MySqlCommand cmd = new MySqlCommand(s, cn);
+                cmd.Parameters.Add("@idvisiteur", MySqlDbType.String).Value = @idvisiteur;
+                cmd.Parameters.Add("@mois", MySqlDbType.String).Value = @mois;
+                using (MySqlDataReader lire = cmd.ExecuteReader())
+                {
+                    string km = "";
+                    string nui = "";
+                    string rep = "";
+                    string etp = "";
+                    while (lire.Read())
+                    {
+                       
+                        // les colonnes a remplir 
+
+                        if (lire["idfrais"].ToString() == "KM")
+                        {
+                            km = lire["quantite"].ToString();
+                        }
+                        if (lire["idfrais"].ToString() == "REP")
+                        {
+                            nui = lire["quantite"].ToString();
+                        }
+                        if (lire["idfrais"].ToString() == "NUI")
+                        {
+                            rep = lire["quantite"].ToString();
+                        }
+                        if (lire["idfrais"].ToString() == "ETP")
+                        {
+                            etp = lire["quantite"].ToString();
+                        }
+
+                    }
+                    l.Items.Add(new ListViewItem(new[] { km, nui, rep, etp }));
+                }
+            }
+        }
+
         /// <summary>
         ///reourn les champs des lignes de frais hors forfait sous la forme d'un tableau 
         /// </summary>

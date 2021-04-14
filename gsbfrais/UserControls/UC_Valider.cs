@@ -58,7 +58,7 @@ namespace gsbfrais.UserControls
         private void button7_Click(object sender, EventArgs e)
         {
             Database cn = new Database();
-                cn.getLesFraisForfait(comboBoxV.SelectedItem.ToString(), comboBoxD.SelectedItem.ToString(), textBox1, textBox2, textBox3, textBox4);
+            cn.getLesFraisForfait(comboBoxV.SelectedItem.ToString(), comboBoxD.SelectedItem.ToString(), textBox1, textBox2, textBox3, textBox4);
             cn.getLesFraisHorsForfait(comboBoxV.SelectedItem.ToString(), comboBoxD.SelectedItem.ToString(), listView);
           
 

@@ -153,7 +153,37 @@ namespace gsbfrais.model
             return info;
 
         }
+        public void getinfomationP(String idvisiteur, String mois,Label l , Label l1)
+        {
+            String s = "SELECT fichefrais.idetat as idEtat, ";
+            s += "fichefrais.datemodif as dateModif,";
+            s += "fichefrais.nbjustificatifs as nbJustificatifs, ";
+            s += "fichefrais.montantvalide as montantValide, ";
+            s += "etat.libelle as libEtat ";
+            s += "FROM fichefrais ";
+            s += "INNER JOIN etat ON fichefrais.idetat = etat.id ";
+            s += " WHERE fichefrais.idvisiteur =@idvisiteur ";
+            s += "AND fichefrais.mois = @mois";
+           
+            
 
+            DataTable dt = new DataTable();
+            using (var cmd = new MySqlCommand(s, cn))
+            using (var da = new MySqlDataAdapter(cmd))
+            {
+                cmd.Parameters.Add("@idvisiteur", MySqlDbType.String).Value = @idvisiteur;
+                cmd.Parameters.Add("@mois", MySqlDbType.String).Value = @mois;
+                da.Fill(dt);
+                foreach (DataRow row in dt.Rows)
+                {
+                    l.Text = row["libEtat"].ToString() + " depuis le " + row["dateModif"].ToString();
+                    l1.Text = row["montantValide"].ToString();
+
+                }
+            }
+
+        }
+      
         public void getLesFraisForfait(String idvisiteur, String mois, ListView l)
         {
 
@@ -233,6 +263,37 @@ namespace gsbfrais.model
                         string libelle = lire["libelle"].ToString();
                         string Montant = lire["montant"].ToString();
                         l.Items.Add(new ListViewItem(new[] { id, dates, libelle, Montant }));
+
+                    }
+                }
+            }
+
+
+        }
+        /// <summary>
+        ///reourn les champs des lignes de frais hors forfait sous la forme d'un tableau 
+        /// </summary>
+        /// <param name="idVisiteur"></param>
+        /// <param name="mois"></param>
+        /// <returns></returns>
+        public void getLesFraisHorsForfaitP(String idvisiteur, String mois, ListView l)
+        {
+            if (OpenConnection())
+            {
+                l.Items.Clear();
+                string s = "SELECT * FROM lignefraishorsforfait WHERE lignefraishorsforfait.idvisiteur = @idVisiteur AND lignefraishorsforfait.mois = @mois";
+                MySqlCommand cmd = new MySqlCommand(s, cn);
+                cmd.Parameters.Add("@idvisiteur", MySqlDbType.String).Value = @idvisiteur;
+                cmd.Parameters.Add("@mois", MySqlDbType.String).Value = @mois;
+                using (MySqlDataReader lire = cmd.ExecuteReader())
+                {
+                    while (lire.Read())
+                    {
+                        // les colonnes a remplir 
+                        string dates = lire["date"].ToString();
+                        string libelle = lire["libelle"].ToString();
+                        string Montant = lire["montant"].ToString();
+                        l.Items.Add(new ListViewItem(new[] {dates, libelle, Montant }));
 
                     }
                 }

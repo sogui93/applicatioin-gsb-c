@@ -40,10 +40,10 @@ namespace gsbfrais.UserControls
         {
             Database cn = new Database();
              
-            cn.getLesFraisHorsForfait(comboBoxV.SelectedItem.ToString(), comboBoxD.SelectedItem.ToString(), listView);
+            cn.getLesFraisHorsForfaitP(comboBoxV.SelectedItem.ToString(), comboBoxD.SelectedItem.ToString(), listView);
             cn.getLesFraisForfait(comboBoxV.SelectedItem.ToString(), comboBoxD.SelectedItem.ToString(), listView1);
-            labeletats.Text = comboBoxD.SelectedItem.ToString();
-
+            cn.getinfomationP(comboBoxV.SelectedItem.ToString(), comboBoxD.SelectedItem.ToString(), labeletats, labelmontant);
+            labelinfo.Text = comboBoxD.SelectedItem.ToString();
         }
     }
 }

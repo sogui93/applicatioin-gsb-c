@@ -36,18 +36,19 @@ namespace gsbfrais.UserControls
             this.comboBoxD = new System.Windows.Forms.ComboBox();
             this.comboBoxV = new System.Windows.Forms.ComboBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.labelmontant = new System.Windows.Forms.Label();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.labelinfo = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.labeletats = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.labelinfo = new System.Windows.Forms.Label();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.listView = new System.Windows.Forms.ListView();
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -59,7 +60,6 @@ namespace gsbfrais.UserControls
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.labelmontant = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -175,12 +175,56 @@ namespace gsbfrais.UserControls
             this.panel4.TabIndex = 34;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
+            // labelmontant
+            // 
+            this.labelmontant.AutoSize = true;
+            this.labelmontant.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelmontant.ForeColor = System.Drawing.Color.White;
+            this.labelmontant.Location = new System.Drawing.Point(148, 77);
+            this.labelmontant.Name = "labelmontant";
+            this.labelmontant.Size = new System.Drawing.Size(0, 19);
+            this.labelmontant.TabIndex = 38;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(18, 111);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 2;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(683, 91);
+            this.tableLayoutPanel3.TabIndex = 37;
+            // 
+            // labelinfo
+            // 
+            this.labelinfo.AutoSize = true;
+            this.labelinfo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelinfo.ForeColor = System.Drawing.Color.White;
+            this.labelinfo.Location = new System.Drawing.Point(203, 11);
+            this.labelinfo.Name = "labelinfo";
+            this.labelinfo.Size = new System.Drawing.Size(0, 19);
+            this.labelinfo.TabIndex = 9;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(14, 11);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(183, 19);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Fiche de frais du mois :";
+            // 
             // labeletats
             // 
             this.labeletats.AutoSize = true;
             this.labeletats.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labeletats.ForeColor = System.Drawing.Color.White;
-            this.labeletats.Location = new System.Drawing.Point(203, 48);
+            this.labeletats.Location = new System.Drawing.Point(68, 48);
             this.labeletats.Name = "labeletats";
             this.labeletats.Size = new System.Drawing.Size(0, 19);
             this.labeletats.TabIndex = 6;
@@ -203,44 +247,9 @@ namespace gsbfrais.UserControls
             this.label4.ForeColor = System.Drawing.SystemColors.Window;
             this.label4.Location = new System.Drawing.Point(14, 48);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(187, 19);
+            this.label4.Size = new System.Drawing.Size(48, 19);
             this.label4.TabIndex = 4;
-            this.label4.Text = "Etat  : Validée depuis le";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(14, 11);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(183, 19);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Fiche de frais du mois :";
-            // 
-            // labelinfo
-            // 
-            this.labelinfo.AutoSize = true;
-            this.labelinfo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelinfo.ForeColor = System.Drawing.Color.White;
-            this.labelinfo.Location = new System.Drawing.Point(203, 11);
-            this.labelinfo.Name = "labelinfo";
-            this.labelinfo.Size = new System.Drawing.Size(120, 19);
-            this.labelinfo.TabIndex = 9;
-            this.labelinfo.Text = "jerome Dubois";
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 2;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(18, 111);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 2;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(683, 91);
-            this.tableLayoutPanel3.TabIndex = 37;
+            this.label4.Text = "Etat  :";
             // 
             // panel1
             // 
@@ -254,6 +263,17 @@ namespace gsbfrais.UserControls
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(899, 34);
             this.panel1.TabIndex = 38;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(14, 8);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(157, 19);
+            this.label7.TabIndex = 38;
+            this.label7.Text = "Eléments forfaitisés  ";
             // 
             // tableLayoutPanel1
             // 
@@ -281,6 +301,17 @@ namespace gsbfrais.UserControls
             this.panel2.Size = new System.Drawing.Size(902, 34);
             this.panel2.TabIndex = 40;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(14, 7);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(264, 19);
+            this.label8.TabIndex = 39;
+            this.label8.Text = "Descriptif des éléments hors forfait";
+            // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.ColumnCount = 2;
@@ -293,28 +324,6 @@ namespace gsbfrais.UserControls
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(683, 91);
             this.tableLayoutPanel4.TabIndex = 37;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(14, 8);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(157, 19);
-            this.label7.TabIndex = 38;
-            this.label7.Text = "Eléments forfaitisés  ";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(14, 7);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(264, 19);
-            this.label8.TabIndex = 39;
-            this.label8.Text = "Descriptif des éléments hors forfait";
             // 
             // listView
             // 
@@ -431,17 +440,6 @@ namespace gsbfrais.UserControls
             this.button2.TabIndex = 44;
             this.button2.Text = "Confrimer Remboursement";
             this.button2.UseVisualStyleBackColor = false;
-            // 
-            // labelmontant
-            // 
-            this.labelmontant.AutoSize = true;
-            this.labelmontant.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelmontant.ForeColor = System.Drawing.Color.White;
-            this.labelmontant.Location = new System.Drawing.Point(148, 77);
-            this.labelmontant.Name = "labelmontant";
-            this.labelmontant.Size = new System.Drawing.Size(120, 19);
-            this.labelmontant.TabIndex = 38;
-            this.labelmontant.Text = "jerome Dubois";
             // 
             // UC_Paiement
             // 

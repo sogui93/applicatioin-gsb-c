@@ -11,21 +11,31 @@ using System.Windows.Forms;
 
 namespace gsbfrais.Forms
 {
+    /// <summary>
+    /// la page comptable
+    /// </summary>
     public partial class Form_Dashboard : Form
     {
         int panelWidth;
         bool isCollapsed;
-        
+
+        /// <summary>
+        /// // affiche l'heur au momment de la connexion 
+        /// </summary>
         public Form_Dashboard()
         {
             InitializeComponent();
-            timerTime.Start();// affiche l'heur au momment de la connexion 
+            timerTime.Start();
             panelWidth = panelLeft.Width;
             isCollapsed = false;
             UC_Home uch = new UC_Home();
             AddControlsTopanel(uch);
 
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="l"></param>
         public void  setlabel(string l)
         {
             name.Text = l;

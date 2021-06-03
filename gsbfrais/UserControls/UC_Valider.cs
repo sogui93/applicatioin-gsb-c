@@ -15,13 +15,14 @@ namespace gsbfrais.UserControls
 {
     public partial class UC_Valider : UserControl
     {
-
+        /// <summary>
+        /// validation des fiche de frais
+        /// </summary>
         public UC_Valider()
         {
             InitializeComponent();
             Database cn = new Database();
-            cn.getNomDesVisiteur(comboBoxV);
-
+            cn.getNomDesVisiteur(comboBoxV,"CL");
 
         }
 
@@ -47,20 +48,27 @@ namespace gsbfrais.UserControls
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Database cn = new Database();
-            cn.getLesMoisDisponibles(comboBoxD, comboBoxV.SelectedItem.ToString());
-            comboBoxD.Visible = true;
-            labeld.Visible = true;
-            buttond.Visible = true;
-
+            if (comboBoxV.SelectedItem != null)
+            { 
+                Database cn = new Database();
+                cn.getLesMoisDisponibles(comboBoxD, comboBoxV.SelectedItem.ToString());
+                comboBoxD.Visible = true;
+                labeld.Visible = true;
+                buttond.Visible = true;
+                nom.Text = cn.getname(comboBoxV.SelectedItem.ToString());
+            }
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            Database cn = new Database();
-            cn.getLesFraisForfait(comboBoxV.SelectedItem.ToString(), comboBoxD.SelectedItem.ToString(), textBox1, textBox2, textBox3, textBox4);
-            cn.getLesFraisHorsForfait(comboBoxV.SelectedItem.ToString(), comboBoxD.SelectedItem.ToString(), listView);
-          
+            if (comboBoxD.SelectedItem != null)
+            {
+                Database cn = new Database();
+                cn.getLesFraisForfait(comboBoxV.SelectedItem.ToString(), comboBoxD.SelectedItem.ToString(), textBox1, textBox2, textBox3, textBox4);
+                cn.getLesFraisHorsForfait(comboBoxV.SelectedItem.ToString(), comboBoxD.SelectedItem.ToString(), listView);
+                textBoxN.Text = listView.Items.Count.ToString();
+            }
+
 
 
 
@@ -85,7 +93,9 @@ namespace gsbfrais.UserControls
 
         }
 
-    
+        /// <summary>
+        /// mettre à jour les frais horts forfait
+        /// </summary>
         public void modifier()
         {
             if (listView.SelectedItems.Count> 0)
@@ -118,7 +128,6 @@ namespace gsbfrais.UserControls
 
             }
 
-            
         }
 
         private void modifierToolStripMenuItem_Click(object sender, EventArgs e)
@@ -126,6 +135,12 @@ namespace gsbfrais.UserControls
              modifier();
             Console.WriteLine(listView.SelectedItems[0]);
 
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Database cn = new Database();
+            cn.majEtat(comboBoxV.SelectedItem.ToString(), comboBoxD.SelectedItem.ToString(),"VA");
         }
     }
 }

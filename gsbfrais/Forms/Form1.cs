@@ -13,8 +13,14 @@ using System.Windows.Forms;
 
 namespace gsbfrais
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public partial class Form1 : Form
-    {
+    { 
+        /// <summary>
+        /// page de connexion
+        /// </summary>
         public Form1()
         {
             InitializeComponent();

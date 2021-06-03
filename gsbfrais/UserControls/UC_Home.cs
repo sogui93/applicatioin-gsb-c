@@ -12,10 +12,15 @@ using System.Windows.Forms;
 
 namespace gsbfrais.UserControls
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public partial class UC_Home : UserControl
     {
         
-
+        /// <summary>
+        /// acceuil de la partie omptable
+        /// </summary>
         public UC_Home()
         {
             InitializeComponent();

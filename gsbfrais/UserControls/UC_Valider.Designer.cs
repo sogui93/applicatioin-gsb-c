@@ -1,6 +1,9 @@
 ﻿
 namespace gsbfrais.UserControls
 {
+    /// <summary>
+    /// 
+    /// </summary>
     partial class UC_Valider
     {
         /// <summary> 
@@ -59,6 +62,7 @@ namespace gsbfrais.UserControls
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.modifierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buttond = new System.Windows.Forms.Button();
+            this.nom = new System.Windows.Forms.Label();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,9 +72,9 @@ namespace gsbfrais.UserControls
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxV.FormattingEnabled = true;
-            this.comboBoxV.Location = new System.Drawing.Point(148, 20);
+            this.comboBoxV.Location = new System.Drawing.Point(313, 18);
             this.comboBoxV.Name = "comboBoxV";
-            this.comboBoxV.Size = new System.Drawing.Size(167, 30);
+            this.comboBoxV.Size = new System.Drawing.Size(64, 30);
             this.comboBoxV.TabIndex = 0;
             this.comboBoxV.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -80,9 +84,9 @@ namespace gsbfrais.UserControls
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxD.FormattingEnabled = true;
-            this.comboBoxD.Location = new System.Drawing.Point(750, 20);
+            this.comboBoxD.Location = new System.Drawing.Point(798, 20);
             this.comboBoxD.Name = "comboBoxD";
-            this.comboBoxD.Size = new System.Drawing.Size(167, 30);
+            this.comboBoxD.Size = new System.Drawing.Size(119, 30);
             this.comboBoxD.TabIndex = 1;
             this.comboBoxD.Visible = false;
             this.comboBoxD.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
@@ -95,7 +99,7 @@ namespace gsbfrais.UserControls
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label1.Location = new System.Drawing.Point(56, 23);
+            this.label1.Location = new System.Drawing.Point(55, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 23);
             this.label1.TabIndex = 2;
@@ -109,7 +113,7 @@ namespace gsbfrais.UserControls
             this.labeld.AutoSize = true;
             this.labeld.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labeld.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.labeld.Location = new System.Drawing.Point(680, 22);
+            this.labeld.Location = new System.Drawing.Point(728, 22);
             this.labeld.Name = "labeld";
             this.labeld.Size = new System.Drawing.Size(64, 23);
             this.labeld.TabIndex = 3;
@@ -289,7 +293,7 @@ namespace gsbfrais.UserControls
             this.buttonv.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonv.ForeColor = System.Drawing.Color.White;
             this.buttonv.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonv.Location = new System.Drawing.Point(324, 20);
+            this.buttonv.Location = new System.Drawing.Point(382, 18);
             this.buttonv.Name = "buttonv";
             this.buttonv.Size = new System.Drawing.Size(53, 30);
             this.buttonv.TabIndex = 21;
@@ -357,6 +361,7 @@ namespace gsbfrais.UserControls
             this.button6.TabIndex = 24;
             this.button6.Text = "Valider";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // listView
             // 
@@ -437,10 +442,24 @@ namespace gsbfrais.UserControls
             this.buttond.Visible = false;
             this.buttond.Click += new System.EventHandler(this.button7_Click);
             // 
+            // nom
+            // 
+            this.nom.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.nom.AutoSize = true;
+            this.nom.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.nom.Location = new System.Drawing.Point(141, 25);
+            this.nom.Name = "nom";
+            this.nom.Size = new System.Drawing.Size(0, 23);
+            this.nom.TabIndex = 28;
+            // 
             // UC_Valider
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.nom);
             this.Controls.Add(this.buttond);
             this.Controls.Add(this.listView);
             this.Controls.Add(this.button5);
@@ -505,5 +524,6 @@ namespace gsbfrais.UserControls
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.Label nom;
     }
 }
